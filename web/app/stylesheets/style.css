@@ -1,0 +1,40 @@
+/* General */
+
+.appBody {
+    margin-top: 2em;
+}
+
+.messageBox{
+    margin-top: 2em;
+}
+
+.right {
+    float: right;
+}
+
+/* Forms */
+
+.registerForm {
+    width: 50%;
+}
+
+.formError {
+    border: 1px solid indianred;
+    border-radius: 3px 3px 3px 3px;
+    margin-top: .5em;
+    color: indianred;
+    text-align: center;
+}
+
+.ng-invalid.ng-dirty {
+    border-color: indianred;
+    outline-color: indianred;
+}
+
+.ng-valid.ng-dirty {
+    border-color: green;
+    outline-color: green;
+}
+
+
+
