@@ -3,7 +3,7 @@ services:
   db:
      build:
        context: .
-       dockerfile: "entertainDb/Dockerfile"
+       dockerfile: "db/Dockerfile"
      ports:
        - "3306:3306"
      volumes:
@@ -11,11 +11,11 @@ services:
   web:
       build:
         context: .
-        dockerfile: "entertainWeb/Dockerfile"
+        dockerfile: "web/Dockerfile"
       ports:
         - "80:80"
       links:
         - db:db
       volumes:
-        - .:/home/app/entertain
-        - /home/app/entertain/node_modules
+        - .:/home/app/web
+        - /home/app/web/node_modules
