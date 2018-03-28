@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+     build:
+       context: .
+       dockerfile: "entertainDb/Dockerfile"
+     ports:
+       - "3306:3306"
+     volumes:
+       - /var/lib/mysql
+  web:
+      build:
+        context: .
+        dockerfile: "entertainWeb/Dockerfile"
+      ports:
+        - "80:80"
+      links:
+        - db:db
+      volumes:
+        - .:/home/app/entertain
+        - /home/app/entertain/node_modules
